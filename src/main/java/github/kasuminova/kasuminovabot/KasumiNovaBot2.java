@@ -27,7 +27,7 @@ import java.util.Map;
 public final class KasumiNovaBot2 extends JavaPlugin {
     public static final KasumiNovaBot2 INSTANCE = new KasumiNovaBot2();
 
-    public static final List<Long> SUPER_ADMIN      = Arrays.asList(3044344887L, 2755271615L);
+    public static final List<Long> SUPER_ADMIN      = Arrays.asList(2755271615L , 1598773037L);
     public static final String     PROTOCOL_VERSION = "1.0.0";
     public static final char       COMMAND_PREFIX   = '#';
 
@@ -60,13 +60,13 @@ public final class KasumiNovaBot2 extends JavaPlugin {
 
         logger.info("载入监听器...");
         registerCommand(HelpCmd.INSTANCE.commandName, HelpCmd.INSTANCE);
-        registerCommand(RandomHitokotoCmd.INSTANCE.commandName, RandomHitokotoCmd.INSTANCE);
+//        registerCommand(RandomHitokotoCmd.INSTANCE.commandName, RandomHitokotoCmd.INSTANCE);
         registerCommand(ChunkPosCalculatorCmd.INSTANCE.commandName, ChunkPosCalculatorCmd.INSTANCE);
-        registerCommand(CPUAffinityMaskCalculatorCmd.INSTANCE.commandName, CPUAffinityMaskCalculatorCmd.INSTANCE);
-        registerCommand(SubmitTipCmd.INSTANCE.commandName, SubmitTipCmd.INSTANCE);
-        registerCommand(RemoveTipCmd.INSTANCE.commandName, RemoveTipCmd.INSTANCE);
-        registerCommand(ApproveTipCmd.INSTANCE.commandName, ApproveTipCmd.INSTANCE);
-        registerCommand(TipStatusCmd.INSTANCE.commandName, TipStatusCmd.INSTANCE);
+//        registerCommand(CPUAffinityMaskCalculatorCmd.INSTANCE.commandName, CPUAffinityMaskCalculatorCmd.INSTANCE);
+//        registerCommand(SubmitTipCmd.INSTANCE.commandName, SubmitTipCmd.INSTANCE);
+//        registerCommand(RemoveTipCmd.INSTANCE.commandName, RemoveTipCmd.INSTANCE);
+//        registerCommand(ApproveTipCmd.INSTANCE.commandName, ApproveTipCmd.INSTANCE);
+//        registerCommand(TipStatusCmd.INSTANCE.commandName, TipStatusCmd.INSTANCE);
 //        registerCommand(GroupDuplicateCalculate.INSTANCE.commandName, GroupDuplicateCalculate.INSTANCE);
 
         commandListener.load();
@@ -83,13 +83,13 @@ public final class KasumiNovaBot2 extends JavaPlugin {
 
         logger.info("卸载监听器...");
         unregisterCommand(HelpCmd.INSTANCE.commandName);
-        unregisterCommand(RandomHitokotoCmd.INSTANCE.commandName);
+//        unregisterCommand(RandomHitokotoCmd.INSTANCE.commandName);
         unregisterCommand(ChunkPosCalculatorCmd.INSTANCE.commandName);
-        unregisterCommand(CPUAffinityMaskCalculatorCmd.INSTANCE.commandName);
-        unregisterCommand(SubmitTipCmd.INSTANCE.commandName);
-        unregisterCommand(RemoveTipCmd.INSTANCE.commandName);
-        unregisterCommand(ApproveTipCmd.INSTANCE.commandName);
-        unregisterCommand(TipStatusCmd.INSTANCE.commandName);
+//        unregisterCommand(CPUAffinityMaskCalculatorCmd.INSTANCE.commandName);
+//        unregisterCommand(SubmitTipCmd.INSTANCE.commandName);
+//        unregisterCommand(RemoveTipCmd.INSTANCE.commandName);
+//        unregisterCommand(ApproveTipCmd.INSTANCE.commandName);
+//        unregisterCommand(TipStatusCmd.INSTANCE.commandName);
 //        unregisterCommand(GroupDuplicateCalculate.INSTANCE.commandName);
 
         commandListener.unLoad();

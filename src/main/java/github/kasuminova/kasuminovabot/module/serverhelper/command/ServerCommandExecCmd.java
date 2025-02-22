@@ -16,7 +16,7 @@ public class ServerCommandExecCmd extends GroupCommandCL {
                 2,
                 new MessageChainBuilder()
                         .append("介绍：向指定服务器执行指令，需要管理员权限，不是所有指令返回的消息都能看到。").append(MiraiCodes.WRAP)
-                        .append(String.format("例：%sEXEC SC1 p give Kasumi_Nova 114514", KasumiNovaBot2.COMMAND_PREFIX))
+                        .append(String.format("例：%sEXEC KD1 p give LanQin_ 114514", KasumiNovaBot2.COMMAND_PREFIX))
                         .build(),
                 cl);
     }

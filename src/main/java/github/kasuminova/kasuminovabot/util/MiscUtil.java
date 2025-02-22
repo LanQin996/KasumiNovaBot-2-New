@@ -134,6 +134,15 @@ public class MiscUtil {
      * @return ID 只能由字母、数字和下划线组成，且长度至少为 3 个字符，最多为 16 个字符，符合以上条件返回 {@code true} 否则返回 {@code false}
      */
     public static boolean isValidUserName(String userName) {
-        return !isNum(userName) && userName.length() >= 3 && userName.length() <= 16 && userName.matches("^[0-9a-zA-Z_]+$");
+        return !isNum(userName) && userName.length() >= 3 && userName.length() <= 16 && !NoChinese(userName) && !NoSpace(userName);
+    }
+
+    /*禁止中文*/
+    public static boolean NoChinese(String str){
+        return str.matches(".*[\\u4e00-\\u9fa5].*");
+    }
+    /*禁止空格*/
+    public static boolean NoSpace(String str){
+        return str.contains(" ");
     }
 }
